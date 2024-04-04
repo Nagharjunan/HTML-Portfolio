@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Media Queries</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body class="max-width">
+    <section id="nav-bar-section">
+      <div class="nav-bar-container">
+        <img src="../assets/menu.svg" alt="Menu" class="hamburger-icon" />
+        <nav class="nav-bar">
+          <a href="/contact" class="nav-bar-links">Contact</a>
+          <a href="/blog" class="nav-bar-links">Blog</a>
+          <a href="/works" class="nav-bar-links">Works</a>
+          <a href="/" class="nav-bar-links">Home</a>
+        </nav>
+      </div>
+    </section>
+    <section class="blog-body">
+      <span class="card-title"
+        >Harnessing Responsive Design: An Introduction to CSS Media
+        Queries</span
+      >
+      <span style="font-size: 18px; color: #8695a4"
+        >12 Dec 2023 | CSS, Responsive Design</span
+      >
+      <p class="card-content">
+        In the ever-evolving landscape of web development, the importance of
+        creating websites that adapt seamlessly across various devices cannot be
+        overstated. With the proliferation of smartphones, tablets, and laptops
+        of various screen sizes, it's crucial for websites to be responsive,
+        ensuring optimal user experience regardless of the device being used.
+        One of the fundamental tools in achieving responsive design is CSS media
+        queries.
+      </p>
+      <h2>What Are CSS Media Queries?</h2>
+      <p>
+        CSS media queries are a powerful feature that allows developers to apply
+        different styles to a website based on characteristics of the user's
+        device, such as screen size, orientation, and resolution. Essentially,
+        media queries enable the design to respond dynamically to the user's
+        environment.
+      </p>
+      <h2>How Do Media Queries Work?</h2>
+      <p>
+        Media queries consist of a media type and one or more expressions that
+        check for certain conditions to be met. The most common media type is
+        'screen,' which targets devices with screens, but others like 'print' or
+        'speech' can also be used. Expressions typically include parameters like
+        width, height, orientation, and resolution.
+      </p>
+      <p>
+        For instance, a basic media query targeting devices with a maximum width
+        of 600 pixels would look like this:
+      </p>
+      <img src="../assets//css-media-query.png" alt="css-media-query-example" />
+      <p>
+        Within the curly braces, developers can define specific styles tailored
+        to smaller screens, such as adjusting font sizes, rearranging layout
+        elements, or hiding certain content altogether.
+      </p>
+      <h2>Creating Responsive Designs with Media Queries</h2>
+      <p>
+        The true power of media queries lies in their ability to create fluid
+        and adaptable layouts. By crafting stylesheets that respond to various
+        screen sizes, developers can ensure that their websites look polished
+        and function smoothly across a spectrum of devices.
+      </p>
+      <p>
+        For example, a website's layout might shift from a multi-column grid on
+        larger screens to a single-column layout on mobile devices, improving
+        readability and usability on smaller screens.
+      </p>
+      <h2>Best Practices for Using Media Queries</h2>
+      <p>
+        While media queries offer great flexibility, it's essential to use them
+        judiciously and follow best practices:
+      </p>
+      <ol>
+        <li>
+          <b>Mobile-first Approach:</b> Start with styles for mobile devices and
+          use media queries to add styles for larger screens. This approach
+          ensures that the website's core functionality and design are optimized
+          for mobile users, with enhancements for desktop users.
+        </li>
+        <li>
+          <b>Test Across Devices: </b> Always test your responsive designs on
+          various devices and screen sizes to ensure consistency and
+          functionality.
+        </li>
+        <li>
+          <b>Keep it Simple: </b> Avoid overcomplicating your stylesheets with
+          excessive media queries. Focus on making incremental adjustments to
+          enhance the user experience.
+        </li>
+      </ol>
+      <h2>Conclusion</h2>
+      <p>
+        CSS media queries are a cornerstone of responsive web design, empowering
+        developers to create websites that adapt beautifully to the diverse
+        array of devices used to access them. By leveraging media queries
+        effectively, developers can craft engaging and user-friendly experiences
+        that seamlessly scale across screens of all sizes. Embrace the power of
+        media queries, and unlock the full potential of responsive design for
+        your next web project.
+      </p>
+    </section>
+    <section class="footer">
+      <p style="display: block">You can contact me on</p>
+      <div class="footer-icons">
+        <a href="https://github.com/Nagharjunan" target="_blank">
+          <img src="../assets/icons8-github-48.png" alt="git_icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+          target="_blank"
+        >
+          <img src="../assets/icons8-linkedin-48.png" alt="linkedin_icon" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

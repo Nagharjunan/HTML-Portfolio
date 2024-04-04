@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <section id="nav-bar-section">
+      <div class="nav-bar-container">
+        <img src="./assets/menu.svg" alt="Menu" class="hamburger-icon" />
+        <nav class="nav-bar">
+          <span routerLink="/contact" class="nav-bar-links">Contact</span>
+          <span routerLink="/blog" class="nav-bar-links">Blog</span>
+          <span routerLink="/works" class="nav-bar-links">Works</span>
+        </nav>
+      </div>
+    </section>
+    <section id="body">
+      <section id="landing-page" class="max-width">
+        <div class="landing-left">
+          <span class="landing-title">
+            Hi, I am Nagharjunan,
+            <br />
+            Web developer and
+            <br />
+            Blender Enthusiast
+          </span>
+          <p class="landing-subtitle">
+            Highly motivated Full Stack Web Developer with a strong foundation
+            in Angular, React, and Node.js. Known for excellent communication
+            skills and a proactive approach to problem-solving. With a proven
+            track record of developing efficient web applications, I bring a
+            deep understanding of modern web technologies to every project. My
+            passion for coding is matched by an eagerness to learn new
+            technologies and methodologies. I am always ready to take on new
+            challenges and strive to stay at the forefront of web development
+            trends. My professional experience is included in my resume, which I
+            have linked below. Feel free to reach out to me if you have any
+            questions or would like to discuss a potential collaboration. I look
+            forward to hearing from you!
+          </p>
+          <button class="landing-button">
+            <a
+              href="https://drive.google.com/file/d/1xlPKS7VJqDrSfiQ3wOirkh183Ro8wLNT/view?usp=sharing"
+              target="_blank"
+              style="color: white"
+              >Download Resume</a
+            >
+          </button>
+          <div class="header-links">
+            <div class="footer-icons">
+              <a href="https://github.com/Nagharjunan" target="_blank">
+                <img src="./assets/icons8-github-48.png" alt="git_icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+                target="_blank"
+              >
+                <img
+                  src="./assets/icons8-linkedin-48.png"
+                  alt="linkedin_icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="landing-right">
+          <img src="./assets/Ellipse 2.svg" />
+          <img
+            class="profile-pic"
+            src="./assets/Picsart_24-03-23_09-06-59-561-modified.png"
+            width="243"
+            height="243"
+          />
+        </div>
+      </section>
+      <section id="recent-posts">
+        <div class="max-width">
+          <div class="recent-posts-header">
+            <span style="font-size: 18px; display: flex; place-content: center"
+              >Recent Posts</span
+            >
+            <!-- <span style="font-size: 16px; color: #00a8cc" class="sm-hidden"
+              >View All</span
+            > -->
+          </div>
+          <div class="recent-posts">
+            <div class="card">
+              <span class="card-title"
+                >Harnessing Responsive Design: An Introduction to CSS Media
+                Queries</span
+              >
+              <span style="font-size: 18px; color: #8695a4"
+                >12 Dec 2023 | CSS, Responsive Design</span
+              >
+              <p class="card-content">
+                In the ever-evolving landscape of web development, the
+                importance of creating websites that adapt seamlessly across
+                various devices cannot be overstated. With the proliferation of
+                smartphones, tablets, and laptops of various screen sizes, it's
+                crucial for websites to be responsive, ensuring optimal user
+                experience regardless of the device being used. One of the
+                fundamental tools in achieving responsive design is CSS media
+                queries.
+              </p>
+              <a href="./posts/css-media-queries.html">Read More...</a>
+            </div>
+            <div class="card">
+              <span class="card-title"
+                >Elevating User Interaction: Exploring the CSS Range Property
+                with Examples</span
+              >
+              <span style="font-size: 18px; color: #8695a4"
+                >21 Jan 2024 | CSS</span
+              >
+              <p class="card-content">
+                In the realm of web development, enhancing user interaction is a
+                perpetual pursuit. One often-overlooked gem for achieving this
+                is the CSS range property. In this blog post, we'll dive into
+                what the range property offers, how it functions, and explore
+                practical examples to illustrate its potential for creating
+                engaging user interfaces.
+              </p>
+              <a href="./posts/css-range.html">Read More...</a>
+            </div>
+          </div>
+          <!-- <span
+            style="
+              display: flex;
+              justify-content: end;
+              font-size: 16px;
+              color: #00a8cc;
+            "
+            class="lg-hidden pr-2"
+            >View All</span
+          > -->
+        </div>
+      </section>
+      <section class="featured-works">
+        <div class="max-width">
+          <div class="featured-works-header">
+            <span style="font-size: 18px; display: flex; place-content: center"
+              >Featured Works</span
+            >
+            <!-- <span style="font-size: 16px; color: #00a8cc" class="sm-hidden"
+              >View All</span
+            > -->
+          </div>
+          <div class="featured-posts">
+            <div class="featured-post">
+              <img src="./assets/Rectangle 30.png" class="featured-post-img" />
+              <div class="lg-pl-2">
+                <span class="featured-post-title">Kamaraj Billing UI</span>
+                <span style="font-size: 18px; color: #8695a4"
+                  >05 Nov 2023 | React, Redux, Typescript, PrimeReact,
+                  PrimeFlex</span
+                >
+                <p class="featured-post-content">
+                  The Application is a billing system for a Factory, which is
+                  used by the sales employees to create new orders which are
+                  then sent to the factory for processing. The application is
+                  built using
+                  <b>React, Redux, Typescript, PrimeReact, and PrimeFlex</b>.
+                  The application is hosted in <b>Vercel</b>. The Code Repo is
+                  made private as it might cause issues with the customer data.
+                </p>
+              </div>
+            </div>
+            <div class="featured-post">
+              <img src="./assets/API_Hero.svg" class="featured-post-img" />
+              <div class="lg-pl-2">
+                <span class="featured-post-title">Kamaraj Billing API</span>
+                <span style="font-size: 18px; color: #8695a4"
+                  >12 Feb 2020 | Nodejs, MongoDB, ExpressJS, BCrypt</span
+                >
+                <p class="featured-post-content">
+                  The Node js server holds all the middleware for the UI that is
+                  being used to create the orders. The server is built using
+                  <b>Nodejs, MongoDB, ExpressJS, BCrypt</b>. The server is
+                  hosted in <b>Render</b>. The code Repo is made private as it
+                  can creates data leaks, as mongoDB keys are present in the
+                  repo.
+                </p>
+              </div>
+            </div>
+            <div class="featured-post">
+              <img
+                src="./assets/blender.png"
+                class="featured-post-img"
+                width="246"
+                height="180"
+              />
+              <div class="lg-pl-2">
+                <span class="featured-post-title">Title</span>
+                <span style="font-size: 18px; color: #8695a4"
+                  >12 Feb 2020 | Figma, Icon Design</span
+                >
+                <p class="featured-post-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  doloribus quibusdam explicabo, totam expedita obcaecati rem.
+                  Sed architecto reprehenderit necessitatibus expedita corrupti
+                  quam eius eum ratione,
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <span
+            style="
+              display: flex;
+              justify-content: end;
+              font-size: 16px;
+              color: #00a8cc;
+            "
+            class="lg-hidden pr-2"
+            >View All</span
+          > -->
+        </div>
+      </section>
+      <section class="footer">
+        <p style="display: block">You can contact me on</p>
+        <div class="footer-icons">
+          <a href="https://github.com/Nagharjunan" target="_blank">
+            <img src="./assets/icons8-github-48.png" alt="git_icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+            target="_blank"
+          >
+            <img src="./assets/icons8-linkedin-48.png" alt="linkedin_icon" />
+          </a>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

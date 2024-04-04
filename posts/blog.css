@@ -1,0 +1,13 @@
+.blog-body {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (max-width: 991px) {
+  .blog-body {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 6rem;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Media Queries</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body class="max-width">
+    <section id="nav-bar-section">
+      <div class="nav-bar-container">
+        <img src="../assets/menu.svg" alt="Menu" class="hamburger-icon" />
+        <nav class="nav-bar">
+          <a href="/contact" class="nav-bar-links">Contact</a>
+          <a href="/blog" class="nav-bar-links">Blog</a>
+          <a href="/works" class="nav-bar-links">Works</a>
+          <a href="/" class="nav-bar-links">Home</a>
+        </nav>
+      </div>
+    </section>
+    <section class="blog-body">
+      <span class="card-title"
+        >Elevating User Interaction: Exploring the CSS Range Property with
+        Examples</span
+      >
+      <span style="font-size: 18px; color: #8695a4">21 Jan 2024 | CSS</span>
+      <p>
+        In the realm of web development, enhancing user interaction is a
+        perpetual pursuit. One often-overlooked gem for achieving this is the
+        CSS range property. In this blog post, we'll dive into what the range
+        property offers, how it functions, and explore practical examples to
+        illustrate its potential for creating engaging user interfaces.
+      </p>
+      <h2>Understanding the CSS Range Property</h2>
+      <p>
+        The CSS <b>`range`</b> property allows developers to style HTML input
+        elements of type <b>`range`</b>. These elements are commonly used for
+        selecting numeric values within a specified range, such as sliders and
+        range selectors. By applying CSS styling to these elements, developers
+        can customize their appearance to align with the overall design
+        aesthetic of their website.
+      </p>
+      <h2>Example 1: Custom Slider Styling</h2>
+      <p>
+        Let's start with a simple example of customizing a slider's appearance.
+        Consider the following CSS:
+      </p>
+      <img src="../assets//css-range.png" alt="css-range" />
+      <p>
+        In this example, we've styled the track of the slider with a gray
+        background and added a blue circular thumb using
+        <b>::-webkit-slider-thumb</b>. This creates a visually appealing slider
+        that fits seamlessly into the design of the website.
+      </p>
+      <h2>Example 2: Dynamic Feedback</h2>
+      <p>
+        Now, let's explore how we can provide dynamic feedback to users as they
+        interact with the slider. We can achieve this by changing the color of
+        the fill as the slider moves. Consider the following CSS:
+      </p>
+      <img src="../assets/css-range-1.png" alt="css-range-1" />
+      <p>
+        In this example, we're using a linear gradient background for the track.
+        As the slider moves, the gradient dynamically adjusts to reflect the
+        current value selected by the user, providing visual feedback in
+        real-time.
+      </p>
+      <h2>Conclusion</h2>
+      <p>
+        The CSS <b>`range`</b> property offers developers a powerful tool for
+        enhancing user interaction and visual appeal in web interfaces. By
+        customizing the appearance of input range elements and providing dynamic
+        feedback, developers can create intuitive and engaging user experiences.
+        Experiment with the <b>`range`</b> property in your projects, and unlock
+        its potential to elevate your designs and delight your users.
+      </p>
+    </section>
+    <section class="footer">
+      <p style="display: block">You can contact me on</p>
+      <div class="footer-icons">
+        <a href="https://github.com/Nagharjunan" target="_blank">
+          <img src="../assets/icons8-github-48.png" alt="git_icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+          target="_blank"
+        >
+          <img src="../assets/icons8-linkedin-48.png" alt="linkedin_icon" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
