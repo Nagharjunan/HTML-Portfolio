@@ -3,242 +3,1046 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style.css" />
+    <title>Nagharjunan R - Full Stack Developer</title>
+    <link rel="icon" type="image/x-icon" href="/assets/N.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <section id="nav-bar-section">
-      <div class="nav-bar-container">
-        <img src="./assets/menu.svg" alt="Menu" class="hamburger-icon" />
-        <nav class="nav-bar">
-          <span routerLink="/contact" class="nav-bar-links">Contact</span>
-          <span routerLink="/blog" class="nav-bar-links">Blog</span>
-          <span routerLink="/works" class="nav-bar-links">Works</span>
-        </nav>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-gray-900 bg-opacity-90 z-50 border-b border-teal-500"
+    >
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-teal-500">NR</a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="hover:text-teal-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-teal-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-teal-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-teal-500 transition-colors"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-teal-500 transition-colors"
+            >Contact</a
+          >
+        </div>
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-teal-500 text-2xl"></i>
+        </button>
       </div>
-    </section>
-    <section id="body">
-      <section id="landing-page" class="max-width">
-        <div class="landing-left">
-          <span class="landing-title">
-            Hi, I am Nagharjunan,
-            <br />
-            Web developer and
-            <br />
-            Blender Enthusiast
-          </span>
-          <p class="landing-subtitle">
-            Highly motivated Full Stack Web Developer with a strong foundation
-            in Angular, React, and Node.js. Known for excellent communication
-            skills and a proactive approach to problem-solving. With a proven
-            track record of developing efficient web applications, I bring a
-            deep understanding of modern web technologies to every project. My
-            passion for coding is matched by an eagerness to learn new
-            technologies and methodologies. I am always ready to take on new
-            challenges and strive to stay at the forefront of web development
-            trends. My professional experience is included in my resume, which I
-            have linked below. Feel free to reach out to me if you have any
-            questions or would like to discuss a potential collaboration. I look
-            forward to hearing from you!
-          </p>
-          <button class="landing-button">
-            <a
-              href="https://drive.google.com/file/d/1xlPKS7VJqDrSfiQ3wOirkh183Ro8wLNT/view?usp=sharing"
-              target="_blank"
-              style="color: white"
-              >Download Resume</a
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800 p-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#about" class="hover:text-teal-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-teal-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-teal-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-teal-500 transition-colors"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-teal-500 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="h-screen flex items-center justify-center relative overflow-hidden"
+      id="hero"
+    >
+      <div class="absolute inset-0 z-0" id="particles-js"></div>
+      <div class="container mx-auto px-6 relative z-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">Nagharjunan R</h1>
+        <div
+          id="typewriter"
+          class="text-xl md:text-2xl mb-6 text-teal-400 h-8"
+        ></div>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Dedicated Full Stack Developer specializing in Angular, React, and
+          Ionic frameworks with a focus on performance optimization and user
+          experience.
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#experience"
+            class="border border-teal-500 text-teal-500 hover:bg-teal-500 font-bold py-2 px-6 rounded-full transition-colors"
+          >
+            My Work Experience
+          </a>
+          <a
+            href="#contact"
+            class="border border-teal-500 text-teal-500 hover:bg-teal-500 font-bold py-2 px-6 rounded-full transition-colors"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-10 w-full text-center">
+        <a href="#about" class="animate-bounce inline-block">
+          <i class="fas fa-chevron-down text-teal-500 text-2xl"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-2/5 mb-8 md:mb-0">
+            <div
+              class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-teal-500"
             >
-          </button>
-          <div class="header-links">
-            <div class="footer-icons">
-              <a href="https://github.com/Nagharjunan" target="_blank">
-                <img src="./assets/icons8-github-48.png" alt="git_icon" />
+              <img
+                src="./assets/ComfyUI_00005_.png"
+                alt="Profile Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-3/5">
+            <p class="text-lg mb-6 text-gray-300">
+              I'm a Full Stack Developer with over 5 years of experience
+              specializing in Angular, React, and Ionic frameworks. My passion
+              lies in creating efficient, user-friendly applications that solve
+              real-world problems.
+            </p>
+            <p class="text-lg mb-6 text-gray-300">
+              Throughout my career at companies like Tata Consultancy Services,
+              Six Sigma Soft Solutions, and TABP Snacks and Beverages, I've
+              developed enterprise applications, implemented testing frameworks,
+              and optimized performance across multiple platforms.
+            </p>
+            <p class="text-lg text-gray-300">
+              When I'm not coding, you can find me playing shuttle, practicing
+              yoga, creating 3D models, or gaming. I believe in continuous
+              learning and staying updated with the latest technologies.
+            </p>
+            <div class="mt-8 flex space-x-4">
+              <a
+                href="https://github.com/Nagharjunan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-500 hover:text-teal-400 transition-colors"
+              >
+                <i class="fab fa-github text-2xl"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+                href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/"
                 target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-500 hover:text-teal-400 transition-colors"
               >
-                <img
-                  src="./assets/icons8-linkedin-48.png"
-                  alt="linkedin_icon"
-                />
+                <i class="fab fa-linkedin text-2xl"></i>
+              </a>
+              <a
+                href="mailto:r.nagharjunan@gmail.com"
+                class="text-teal-500 hover:text-teal-400 transition-colors"
+              >
+                <i class="fas fa-envelope text-2xl"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="landing-right">
-          <img src="./assets/Ellipse 2.svg" />
-          <img
-            class="profile-pic"
-            src="./assets/Picsart_24-03-23_09-06-59-561-modified.png"
-            width="243"
-            height="243"
-          />
-        </div>
-      </section>
-      <section id="recent-posts">
-        <div class="max-width">
-          <div class="recent-posts-header">
-            <span style="font-size: 18px; display: flex; place-content: center"
-              >Recent Posts</span
-            >
-            <!-- <span style="font-size: 16px; color: #00a8cc" class="sm-hidden"
-              >View All</span
-            > -->
-          </div>
-          <div class="recent-posts">
-            <div class="card">
-              <span class="card-title"
-                >Harnessing Responsive Design: An Introduction to CSS Media
-                Queries</span
-              >
-              <span style="font-size: 18px; color: #8695a4"
-                >12 Dec 2023 | CSS, Responsive Design</span
-              >
-              <p class="card-content">
-                In the ever-evolving landscape of web development, the
-                importance of creating websites that adapt seamlessly across
-                various devices cannot be overstated. With the proliferation of
-                smartphones, tablets, and laptops of various screen sizes, it's
-                crucial for websites to be responsive, ensuring optimal user
-                experience regardless of the device being used. One of the
-                fundamental tools in achieving responsive design is CSS media
-                queries.
-              </p>
-              <a href="./posts/css-media-queries.html">Read More...</a>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Frontend -->
+          <div
+            class="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform skill-card"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-code text-teal-500 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Frontend</h3>
             </div>
-            <div class="card">
-              <span class="card-title"
-                >Elevating User Interaction: Exploring the CSS Range Property
-                with Examples</span
-              >
-              <span style="font-size: 18px; color: #8695a4"
-                >21 Jan 2024 | CSS</span
-              >
-              <p class="card-content">
-                In the realm of web development, enhancing user interaction is a
-                perpetual pursuit. One often-overlooked gem for achieving this
-                is the CSS range property. In this blog post, we'll dive into
-                what the range property offers, how it functions, and explore
-                practical examples to illustrate its potential for creating
-                engaging user interfaces.
-              </p>
-              <a href="./posts/css-range.html">Read More...</a>
-            </div>
-          </div>
-          <!-- <span
-            style="
-              display: flex;
-              justify-content: end;
-              font-size: 16px;
-              color: #00a8cc;
-            "
-            class="lg-hidden pr-2"
-            >View All</span
-          > -->
-        </div>
-      </section>
-      <section class="featured-works">
-        <div class="max-width">
-          <div class="featured-works-header">
-            <span style="font-size: 18px; display: flex; place-content: center"
-              >Featured Works</span
-            >
-            <!-- <span style="font-size: 16px; color: #00a8cc" class="sm-hidden"
-              >View All</span
-            > -->
-          </div>
-          <div class="featured-posts">
-            <div class="featured-post">
-              <img src="./assets/Rectangle 30.png" class="featured-post-img" />
-              <div class="lg-pl-2">
-                <span class="featured-post-title">Kamaraj Billing UI</span>
-                <span style="font-size: 18px; color: #8695a4"
-                  >05 Nov 2023 | React, Redux, Typescript, PrimeReact,
-                  PrimeFlex</span
-                >
-                <p class="featured-post-content">
-                  The Application is a billing system for a Factory, which is
-                  used by the sales employees to create new orders which are
-                  then sent to the factory for processing. The application is
-                  built using
-                  <b>React, Redux, Typescript, PrimeReact, and PrimeFlex</b>.
-                  The application is hosted in <b>Vercel</b>. The Code Repo is
-                  made private as it might cause issues with the customer data.
-                </p>
+            <div class="space-y-3">
+              <div class="skill-item" data-skill="Angular">
+                <div class="flex justify-between mb-1">
+                  <span>Angular</span>
+                  <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div class="featured-post">
-              <img src="./assets/API_Hero.svg" class="featured-post-img" />
-              <div class="lg-pl-2">
-                <span class="featured-post-title">Kamaraj Billing API</span>
-                <span style="font-size: 18px; color: #8695a4"
-                  >12 Feb 2020 | Nodejs, MongoDB, ExpressJS, BCrypt</span
-                >
-                <p class="featured-post-content">
-                  The Node js server holds all the middleware for the UI that is
-                  being used to create the orders. The server is built using
-                  <b>Nodejs, MongoDB, ExpressJS, BCrypt</b>. The server is
-                  hosted in <b>Render</b>. The code Repo is made private as it
-                  can creates data leaks, as mongoDB keys are present in the
-                  repo.
-                </p>
+              <div class="skill-item" data-skill="React.js">
+                <div class="flex justify-between mb-1">
+                  <span>React.js</span>
+                  <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div class="featured-post">
-              <img
-                src="./assets/blender.png"
-                class="featured-post-img"
-                width="246"
-                height="180"
-              />
-              <div class="lg-pl-2">
-                <span class="featured-post-title">Minecraft World</span>
-                <span style="font-size: 18px; color: #8695a4"
-                  >06 Mar 2024 | Blender</span
-                >
-                <p class="featured-post-content">
-                  This is a beginner project that I did in Blender. The project
-                  is a Minecraft world with a few blocks which is then then
-                  shaded and did a simple animation where the world is
-                  destroyed. The project is done using <b>Blender</b>.
-                </p>
+              <div class="skill-item" data-skill="Ionic">
+                <div class="flex justify-between mb-1">
+                  <span>Ionic</span>
+                  <span>80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="HTML5/CSS">
+                <div class="flex justify-between mb-1">
+                  <span>HTML5/CSS</span>
+                  <span>95%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Bootstrap">
+                <div class="flex justify-between mb-1">
+                  <span>Bootstrap</span>
+                  <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- <span
-            style="
-              display: flex;
-              justify-content: end;
-              font-size: 16px;
-              color: #00a8cc;
-            "
-            class="lg-hidden pr-2"
-            >View All</span
-          > -->
-        </div>
-      </section>
-      <section class="footer">
-        <p style="display: block">You can contact me on</p>
-        <div class="footer-icons">
-          <a href="https://github.com/Nagharjunan" target="_blank">
-            <img src="./assets/icons8-github-48.png" alt="git_icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
-            target="_blank"
+          <!-- Backend & State Management -->
+          <div
+            class="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform skill-card"
           >
-            <img src="./assets/icons8-linkedin-48.png" alt="linkedin_icon" />
+            <div class="flex items-center mb-4">
+              <i class="fas fa-server text-teal-500 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Backend & State Management</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="skill-item" data-skill="Node.js">
+                <div class="flex justify-between mb-1">
+                  <span>Node.js</span>
+                  <span>80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Express">
+                <div class="flex justify-between mb-1">
+                  <span>Express</span>
+                  <span>75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Redux">
+                <div class="flex justify-between mb-1">
+                  <span>Redux</span>
+                  <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="NGRX">
+                <div class="flex justify-between mb-1">
+                  <span>NGRX</span>
+                  <span>80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="RXJS">
+                <div class="flex justify-between mb-1">
+                  <span>RXJS</span>
+                  <span>75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Skills -->
+          <div
+            class="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform skill-card"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-database text-teal-500 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Database & Cloud</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="skill-item" data-skill="MongoDB">
+                <div class="flex justify-between mb-1">
+                  <span>MongoDB</span>
+                  <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="AWS">
+                <div class="flex justify-between mb-1">
+                  <span>AWS</span>
+                  <span>70%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Git">
+                <div class="flex justify-between mb-1">
+                  <span>Git</span>
+                  <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Responsive Design">
+                <div class="flex justify-between mb-1">
+                  <span>Responsive Design</span>
+                  <span>95%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="API Integration">
+                <div class="flex justify-between mb-1">
+                  <span>API Integration</span>
+                  <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-teal-500 h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="mt-12">
+          <h3 class="text-xl font-bold mb-6 text-center">
+            Programming Languages
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <div class="language-badge">JavaScript</div>
+            <div class="language-badge">TypeScript</div>
+            <div class="language-badge">Python</div>
+            <div class="language-badge">HTML/CSS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+
+        <div class="relative experience-timeline">
+          <!-- TCS -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-dot"></div>
+            <div
+              class="bg-gray-900 rounded-lg p-6 ml-8 md:ml-12 experience-card"
+            >
+              <h3 class="text-xl font-bold mb-2">Web Application Developer</h3>
+              <div class="flex items-center mb-4">
+                <span class="text-teal-500">Tata Consultancy Services</span>
+                <span class="mx-2">•</span>
+                <span class="text-gray-400">Dec 2022 - Present</span>
+              </div>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>
+                  Developed and documented the architecture of a Knowledge
+                  Transfer Dashboard, gaining expertise in API integration
+                  techniques and UI development that could be applied to future
+                  projects.
+                </li>
+                <li>
+                  Developed and implemented robust unit testing and end-to-end
+                  testing frameworks for Angular applications, reducing
+                  post-deployment issues by 40%.
+                </li>
+                <li>
+                  Designed and prototyped innovative solutions for internal
+                  workflow optimization, earning 2nd place recognition in the
+                  company's Innovista competition.
+                </li>
+                <li>
+                  Implemented performance optimization techniques across
+                  multiple applications, improving load times by 25%.
+                </li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">Testing</span>
+                <span class="tech-tag">Performance Optimization</span>
+                <span class="tech-tag">API Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Six Sigma -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-dot"></div>
+            <div
+              class="bg-gray-900 rounded-lg p-6 ml-8 md:ml-12 experience-card"
+            >
+              <h3 class="text-xl font-bold mb-2">Angular Developer</h3>
+              <div class="flex items-center mb-4">
+                <span class="text-teal-500">Six Sigma Soft Solutions</span>
+                <span class="mx-2">•</span>
+                <span class="text-gray-400">Nov 2021 - Dec 2022</span>
+              </div>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>
+                  Developed responsive user interfaces for enterprise web
+                  applications using Angular 12, resulting in a 30% increase in
+                  user engagement.
+                </li>
+                <li>
+                  Optimized application performance by implementing lazy loading
+                  techniques, reducing initial load time by 45%.
+                </li>
+                <li>
+                  Mentored junior developers on Angular best practices and
+                  modern development workflows.
+                </li>
+                <li>
+                  Collaborated with backend teams to integrate APIs and ensure
+                  seamless data flow across the application stack.
+                </li>
+                <li>
+                  Utilized Git for version control and participated in Agile
+                  development processes.
+                </li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">Lazy Loading</span>
+                <span class="tech-tag">API Integration</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TABP -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div
+              class="bg-gray-900 rounded-lg p-6 ml-8 md:ml-12 experience-card"
+            >
+              <h3 class="text-xl font-bold mb-2">Ionic Developer</h3>
+              <div class="flex items-center mb-4">
+                <span class="text-teal-500"
+                  >TABP Snacks and Beverages Pvt Ltd</span
+                >
+                <span class="mx-2">•</span>
+                <span class="text-gray-400">Aug 2019 - Oct 2021</span>
+              </div>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>
+                  Developed and maintained a company-wide ERP system using Ionic
+                  framework, improving operational efficiency by 35%.
+                </li>
+                <li>
+                  Created an internal goal tracking application that enabled
+                  management to identify and reward high-performing employees.
+                </li>
+                <li>
+                  Implemented responsive design principles to ensure optimal
+                  user experience across various devices.
+                </li>
+                <li>
+                  Integrated RESTful APIs to facilitate seamless data
+                  communication between frontend and backend systems.
+                </li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="tech-tag">Ionic</span>
+                <span class="tech-tag">ERP System</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">RESTful API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Certifications</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-gray-900 rounded-lg p-6 transform hover:scale-105 transition-transform"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-certificate text-teal-500 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Angular Advanced</h3>
+            </div>
+            <p class="text-gray-300">
+              Comprehensive certification covering advanced Angular concepts
+              including performance optimization, state management, and
+              component architecture.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-900 rounded-lg p-6 transform hover:scale-105 transition-transform"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-certificate text-teal-500 text-2xl mr-3"></i>
+              <h3 class="text-xl font-bold">Supervised Machine Learning</h3>
+            </div>
+            <p class="text-gray-300">
+              Certification in regression and classification algorithms, model
+              training, and evaluation techniques for supervised learning
+              applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+
+        <div class="max-w-2xl mx-auto bg-gray-800 rounded-lg p-8">
+          <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-teal-500 text-xl mr-4 mt-1"></i>
+              <div>
+                <p class="font-medium">Email</p>
+                <p class="text-gray-300">r.nagharjunan@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-phone text-teal-500 text-xl mr-4 mt-1"></i>
+              <div>
+                <p class="font-medium">Phone</p>
+                <p class="text-gray-300">+91 (701) 010-2923</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i
+                class="fas fa-map-marker-alt text-teal-500 text-xl mr-4 mt-1"
+              ></i>
+              <div>
+                <p class="font-medium">Location</p>
+                <p class="text-gray-300">Chennai, India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="text-lg font-medium mb-4">Connect With Me</h4>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/Nagharjunan"
+                class="text-teal-500 hover:text-teal-400 transition-colors text-2xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nagharjunan-rajaa-saravanan-974098bb/"
+                class="text-teal-500 hover:text-teal-400 transition-colors text-2xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="mailto:r.nagharjunan@gmail.com"
+                class="text-teal-500 hover:text-teal-400 transition-colors text-2xl"
+              >
+                <i class="fas fa-envelope text-2xl"></i>
+              </a>
+              <!-- <a
+                href="https://dev.to/"
+                class="text-teal-500 hover:text-teal-400 transition-colors text-2xl"
+              >
+                <i class="fab fa-dev"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-950 text-center">
+      <div class="container mx-auto px-6">
+        <p class="text-gray-400">© 2025 Nagharjunan R. All rights reserved.</p>
+        <div class="mt-4">
+          <a
+            href="#hero"
+            class="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-full transition-colors"
+          >
+            <i class="fas fa-arrow-up mr-2"></i> Back to Top
           </a>
         </div>
-      </section>
-    </section>
+      </div>
+    </footer>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Typewriter effect
+      const typewriter = document.getElementById("typewriter");
+      const titles = [
+        "Full Stack Developer",
+        "Angular Expert",
+        "React Enthusiast",
+      ];
+      let titleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 100;
+
+      function type() {
+        const currentTitle = titles[titleIndex];
+
+        if (isDeleting) {
+          typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = 50;
+        } else {
+          typewriter.textContent = currentTitle.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentTitle.length) {
+          isDeleting = true;
+          typingSpeed = 1000; // Pause at the end
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          titleIndex = (titleIndex + 1) % titles.length;
+          typingSpeed = 300; // Pause before starting new word
+        }
+
+        setTimeout(type, typingSpeed);
+      }
+
+      // Start the typewriter effect
+      setTimeout(type, 1000);
+
+      // Initialize particles.js
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 1200,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+
+      // Form submission handler
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // Here you would typically send this data to a server
+          // For demo purposes, we'll just show an alert
+          alert(
+            `Thank you ${name} for your message. I'll get back to you soon!`
+          );
+
+          // Reset form
+          contactForm.reset();
+        });
+      }
+
+      // Add animation to timeline items when they come into view
+      const observerOptions = {
+        threshold: 0.2,
+      };
+
+      const observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe timeline items
+      document.querySelectorAll(".timeline-item").forEach((item) => {
+        observer.observe(item);
+      });
+
+      // Observe project cards
+      document.querySelectorAll(".project-card").forEach((card) => {
+        observer.observe(card);
+      });
+
+      // Observe skill cards
+      document.querySelectorAll(".skill-card").forEach((card) => {
+        observer.observe(card);
+      });
+    </script>
+
+    <!-- Add custom CSS -->
+    <style>
+      /* Timeline styling */
+      .experience-timeline {
+        position: relative;
+      }
+
+      .experience-timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        background-color: rgba(20, 184, 166, 0.5);
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(20, 184, 166);
+        top: 24px;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease forwards;
+      }
+
+      .animate-slideUp {
+        animation: slideUp 0.8s ease forwards;
+      }
+
+      /* Language badges */
+      .language-badge {
+        background-color: #1e293b;
+        color: #14b8a6;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        border: 1px solid #14b8a6;
+      }
+
+      /* Tech tags */
+      .tech-tag {
+        background-color: rgba(20, 184, 166, 0.1);
+        color: #14b8a6;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+      }
+
+      /* Skill bars animation */
+      .bg-teal-500.h-2 {
+        transition: width 1.5s ease-in-out;
+        width: 0 !important;
+      }
+
+      .skill-card.animate-fadeIn .bg-teal-500.h-2 {
+        width: var(--skill-width) !important;
+      }
+
+      /* Set initial width for skill bars */
+      .skill-item[data-skill="Angular"] .bg-teal-500.h-2 {
+        --skill-width: 90%;
+      }
+      .skill-item[data-skill="React.js"] .bg-teal-500.h-2 {
+        --skill-width: 85%;
+      }
+      .skill-item[data-skill="Ionic"] .bg-teal-500.h-2 {
+        --skill-width: 80%;
+      }
+      .skill-item[data-skill="HTML5/CSS"] .bg-teal-500.h-2 {
+        --skill-width: 95%;
+      }
+      .skill-item[data-skill="Bootstrap"] .bg-teal-500.h-2 {
+        --skill-width: 85%;
+      }
+      .skill-item[data-skill="Node.js"] .bg-teal-500.h-2 {
+        --skill-width: 80%;
+      }
+      .skill-item[data-skill="Express"] .bg-teal-500.h-2 {
+        --skill-width: 75%;
+      }
+      .skill-item[data-skill="Redux"] .bg-teal-500.h-2 {
+        --skill-width: 85%;
+      }
+      .skill-item[data-skill="NGRX"] .bg-teal-500.h-2 {
+        --skill-width: 80%;
+      }
+      .skill-item[data-skill="RXJS"] .bg-teal-500.h-2 {
+        --skill-width: 75%;
+      }
+      .skill-item[data-skill="MongoDB"] .bg-teal-500.h-2 {
+        --skill-width: 85%;
+      }
+      .skill-item[data-skill="AWS"] .bg-teal-500.h-2 {
+        --skill-width: 70%;
+      }
+      .skill-item[data-skill="Git"] .bg-teal-500.h-2 {
+        --skill-width: 90%;
+      }
+      .skill-item[data-skill="Responsive Design"] .bg-teal-500.h-2 {
+        --skill-width: 95%;
+      }
+      .skill-item[data-skill="API Integration"] .bg-teal-500.h-2 {
+        --skill-width: 90%;
+      }
+    </style>
   </body>
 </html>
